@@ -3,7 +3,7 @@
 // @namespace   http://www.domotique-fibaro.fr
 // @description Agrandie la fenêtre de debug et ajoute un bouton de copie dans le presse-papier
 // @include     http://*/fibaro/*/devices/virtual_edit.html*
-// @version     1.0
+// @version     1.1
 // @grant       none
 // ==/UserScript==
 
@@ -113,25 +113,25 @@ function main() {
 				}
 
 				//*** Retrieve HC2 address and Virtual Device ID from current URL
-				var currentURL = window.location.href; // http://192.168.x.y/api/virtualDevices/15/debugMessages/0
-				var id = currentURL.match(/id=([0-9]+)/);
-				if (id) {
-					id = id[1];
-				}
-				else {
-					alert("Erreur : impossible de récupérer l'ID depuis l'URL");
-					return false;
-				}
-				var address = currentURL.match(/^(https?:\/\/[a-z0-9.]*)\//);
-				if (address) {
-					address = address[1];
-				}
-				else {
-					alert("Erreur : impossible de récupérer l'adresse depuis l'URL");
-					return false;
-				}
-				debugURL = address + "/api/virtualDevices/" + id + "/debugMessages/0" // http://192.168.x.y/fibaro/fr/devices/virtual_edit.html?id=15#bookmark-advanced
-				console.log("VD debug messages : " + debugURL);
+				//var currentURL = window.location.href; // http://192.168.x.y/api/virtualDevices/15/debugMessages/0
+				//var id = currentURL.match(/id=([0-9]+)/);
+				//if (id) {
+					//id = id[1];
+				//}
+				//else {
+					//alert("Erreur : impossible de récupérer l'ID depuis l'URL");
+					//return false;
+				//}
+				//var address = currentURL.match(/^(https?:\/\/[a-z0-9.]*)\//);
+				//if (address) {
+					//address = address[1];
+				//}
+				//else {
+					//alert("Erreur : impossible de récupérer l'adresse depuis l'URL");
+					//return false;
+				//}
+				//debugURL = address + "/api/virtualDevices/" + id + "/debugMessages/0" // http://192.168.x.y/fibaro/fr/devices/virtual_edit.html?id=15#bookmark-advanced
+				//console.log("VD debug messages : " + debugURL);
 
 				//*** Create temporary hidden text element, if it doesn't already exist
 				var targetId = "_hiddenCopyText_";
