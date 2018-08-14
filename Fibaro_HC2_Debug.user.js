@@ -3,7 +3,8 @@
 // @namespace   http://www.domotique-fibaro.fr
 // @description Agrandie la fenêtre de debug et ajoute un bouton de copie dans le presse-papier
 // @include     http://*/fibaro/*/devices/virtual_edit.html*
-// @version     1.1
+// @include     https://*/fibaro/*/devices/virtual_edit.html*
+// @version     1.2
 // @grant       none
 // ==/UserScript==
 
